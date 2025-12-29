@@ -51,6 +51,9 @@ function showCity(event) {
   let selectedCityDate = moment()
     .tz(selectedCityTimezone)
     .format(`MMMM Do YYYY`);
+  //   if (selectedCityTimezone === "") {
+  //     let selectedCityName = "3";
+  //   } else {
   let selectedCityName = selectedCityTimezone.split("/")[1];
 
   cityList.innerHTML += `     <div class="each-city" id="each-city">
@@ -62,10 +65,12 @@ function showCity(event) {
           </div>
           <div class="each-city-time" id="each-city-time">${selectedCityTime}</div>
         </div>`;
+  //   }
   //showCurrentLocation();
   //   showCorrectName();
 }
-
+let firstCityTimeZone = document.querySelector("#first-city-time-zone");
+firstCityTimeZone.innerHTML = moment.tz.guess();
 showCurrentLocation();
 setInterval(showCurrentLocation, 1000);
 
