@@ -6,7 +6,7 @@ function showSelectedLocation() {
 
   for (let i = 0; i < numCities; i++) {
     if (cityTimezones[i].innerHTML === "") {
-      let currentCityDate = moment().format(`MMMM Do YYYY`);
+      let currentCityDate = moment().tz.guess().format(`MMMM Do YYYY`);
       cityDates[i].innerHTML = currentCityDate;
 
       let currentCityTime = moment().format(`h:mm:ss A`);
@@ -28,11 +28,13 @@ function showSelectedLocation() {
 function showCity() {
   let selectedCity = document.querySelector("#cities");
   let selectedCityTimezone = selectedCity.value;
+  if (selectedCityTimezone === "") {
+    selectedCityTimezone = moment.tz.guess();
+  }
   let selectedCityTime = moment().tz(selectedCityTimezone).format(`h:mm:ss A`);
   let selectedCityDate = moment()
     .tz(selectedCityTimezone)
     .format(`MMMM Do YYYY`);
-
   let selectedCityName = selectedCityTimezone.split("/")[1];
   let cityList = document.querySelector("#clock-worlds");
   cityList.innerHTML += `<div class="each-city" id="each-city">
@@ -45,6 +47,7 @@ function showCity() {
           <div class="each-city-time" id="each-city-time">${selectedCityTime}</div>
         </div>`;
 }
+
 function handleSelectedCity(event) {
   let selectedCity = document.querySelector("#cities");
   let selectedCityTimezone = selectedCity.value;
