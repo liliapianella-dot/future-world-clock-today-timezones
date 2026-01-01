@@ -45,7 +45,7 @@ function showCity() {
     let cityList = document.querySelector("#clock-worlds");
     cityList.innerHTML += `<div class="each-city" id="each-city">
           <div class="each-city-remove-button"><button>-</button></div>
-          <div>
+          <div class="each-city-central-box">
             <div class="each-city-name">${selectedCityName}</div>
             <div class="each-city-timezone">${selectedCityTimezone}</div>
             <div class="each-city-date" id="each-city-date">${selectedCityDate}</div>
