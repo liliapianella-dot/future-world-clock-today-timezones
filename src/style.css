@@ -72,7 +72,7 @@ main .each-city-remove-button button:hover {
 main .each-city {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  flex-wrap: wrap;
   border-bottom: 1px dashed #938fa1;
   padding: 20px 10px 10px 10px;
 }
