@@ -98,6 +98,7 @@ main .each-city-date {
 main .each-city-time {
   font-size: 48px;
   flex: 3;
+  flex-wrap: wrap;
   text-align: left;
   padding: 0 15px;
 }
