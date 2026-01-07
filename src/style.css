@@ -51,26 +51,22 @@ header .cities-list {
   font-weight: 400;
   font-style: normal;
 }
-main .each-city-remove-button {
-  padding: 15px 3px;
-}
 main .each-city-remove-button button {
-  background: rgb(215, 237, 219);
+  background: rgb(77, 106, 97);
   padding: 6px 12px;
-  border: 1px solid rgb(215, 237, 219);
+  border: 1px solid rgb(77, 106, 97);
   border-radius: 10px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 18px;
   transition: all 200ms ease-in-out;
-  display: block;
+  flex: 1;
   text-align: center;
   margin: 10px 0 0 0;
 }
 
 main .each-city-remove-button button:hover {
-  background: rgb(77, 106, 97);
-  color: white;
-  border: rgb(77, 106, 97);
+  background-color: rgb(215, 237, 219);
+  border: rgb(215, 237, 219);
   cursor: pointer;
 }
 
@@ -100,8 +96,7 @@ main .each-city-date {
 }
 
 main .each-city-time {
-  font-size: 42px;
-  flex: fill;
+  font-size: 38px;
   flex-wrap: wrap;
   text-align: right;
   padding: 0 15px;
@@ -114,13 +109,4 @@ footer {
 }
 footer a {
   color: rgb(230, 243, 232);
-}
-@media (max-width: 900px) {
-  main .each-city-time {
-    flex:fill
-    font-size: 48px;
-    margin-top: 10px;
-    padding: 5px 0;
-    text-align: center;
-  }
 }
